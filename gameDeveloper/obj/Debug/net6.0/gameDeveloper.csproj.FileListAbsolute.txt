@@ -1,0 +1,15 @@
+C:\Users\User\OneDrive\Desktop\coding dojo\c#\net\gameDeveloper\bin\Debug\net6.0\gameDeveloper.exe
+C:\Users\User\OneDrive\Desktop\coding dojo\c#\net\gameDeveloper\bin\Debug\net6.0\gameDeveloper.deps.json
+C:\Users\User\OneDrive\Desktop\coding dojo\c#\net\gameDeveloper\bin\Debug\net6.0\gameDeveloper.runtimeconfig.json
+C:\Users\User\OneDrive\Desktop\coding dojo\c#\net\gameDeveloper\bin\Debug\net6.0\gameDeveloper.dll
+C:\Users\User\OneDrive\Desktop\coding dojo\c#\net\gameDeveloper\bin\Debug\net6.0\gameDeveloper.pdb
+C:\Users\User\OneDrive\Desktop\coding dojo\c#\net\gameDeveloper\obj\Debug\net6.0\gameDeveloper.csproj.AssemblyReference.cache
+C:\Users\User\OneDrive\Desktop\coding dojo\c#\net\gameDeveloper\obj\Debug\net6.0\gameDeveloper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\OneDrive\Desktop\coding dojo\c#\net\gameDeveloper\obj\Debug\net6.0\gameDeveloper.AssemblyInfoInputs.cache
+C:\Users\User\OneDrive\Desktop\coding dojo\c#\net\gameDeveloper\obj\Debug\net6.0\gameDeveloper.AssemblyInfo.cs
+C:\Users\User\OneDrive\Desktop\coding dojo\c#\net\gameDeveloper\obj\Debug\net6.0\gameDeveloper.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive\Desktop\coding dojo\c#\net\gameDeveloper\obj\Debug\net6.0\gameDeveloper.dll
+C:\Users\User\OneDrive\Desktop\coding dojo\c#\net\gameDeveloper\obj\Debug\net6.0\refint\gameDeveloper.dll
+C:\Users\User\OneDrive\Desktop\coding dojo\c#\net\gameDeveloper\obj\Debug\net6.0\gameDeveloper.pdb
+C:\Users\User\OneDrive\Desktop\coding dojo\c#\net\gameDeveloper\obj\Debug\net6.0\gameDeveloper.genruntimeconfig.cache
+C:\Users\User\OneDrive\Desktop\coding dojo\c#\net\gameDeveloper\obj\Debug\net6.0\ref\gameDeveloper.dll
