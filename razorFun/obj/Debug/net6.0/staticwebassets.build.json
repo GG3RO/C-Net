@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "D8s7OsHoFojjcS60+RJvQwFNPl8RNx1hPXrgi1RF9n8=",
+  "Source": "razorFun",
+  "BasePath": "_content/razorFun",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "razorFun\\wwwroot",
+      "Source": "razorFun",
+      "ContentRoot": "C:\\Users\\User\\OneDrive\\Desktop\\coding dojo\\c#\\net\\razorFun\\wwwroot\\",
+      "BasePath": "_content/razorFun",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\User\\OneDrive\\Desktop\\coding dojo\\c#\\net\\razorFun\\wwwroot\\css\\style.css",
+      "SourceId": "razorFun",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\OneDrive\\Desktop\\coding dojo\\c#\\net\\razorFun\\wwwroot\\",
+      "BasePath": "_content/razorFun",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    }
+  ]
+}

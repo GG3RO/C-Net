@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAzorFun</title>
+    <link rel="stylesheet" href="~/css/style.css"/> 
+</head>
+<body>
+    <h1>Here are some delicious food</h1>
+    @{
+        List<string> words =new List<string>{"apple pie" ,"Pizza", "lazagna", "donuts", "burritos" };
+
+        
+    }
+                <p>Cinammon rolls</p>
+            <p>Chocolate cake</p>
+
+    @{ foreach (var item in words){
+                <h3>@item</h3>
+            }
+    }
+    
+</body>
+</html>
