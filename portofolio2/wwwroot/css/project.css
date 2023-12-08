@@ -1,0 +1,23 @@
+.container{
+    width: 60%;
+    margin:auto;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+.justify{
+    justify-content: space-evenly;
+}
+
+h1{
+    text-align: center;
+}
+
+.justify-btw{
+    justify-content: space-between;
+}
+img{
+    width: 200px;
+}

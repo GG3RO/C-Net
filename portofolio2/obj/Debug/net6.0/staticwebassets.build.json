@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "Hash": "90qFbBSRJHJiTqd+af7rPGa1xMTWYO8SnmaNgXBh/lk=",
+  "Source": "portofolio2",
+  "BasePath": "_content/portofolio2",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "portofolio2\\wwwroot",
+      "Source": "portofolio2",
+      "ContentRoot": "C:\\Users\\User\\OneDrive\\Desktop\\coding dojo\\c#\\net\\portofolio2\\wwwroot\\",
+      "BasePath": "_content/portofolio2",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\User\\OneDrive\\Desktop\\coding dojo\\c#\\net\\portofolio2\\wwwroot\\css\\contact.css",
+      "SourceId": "portofolio2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\OneDrive\\Desktop\\coding dojo\\c#\\net\\portofolio2\\wwwroot\\",
+      "BasePath": "_content/portofolio2",
+      "RelativePath": "css/contact.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\contact.css"
+    },
+    {
+      "Identity": "C:\\Users\\User\\OneDrive\\Desktop\\coding dojo\\c#\\net\\portofolio2\\wwwroot\\css\\project.css",
+      "SourceId": "portofolio2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\OneDrive\\Desktop\\coding dojo\\c#\\net\\portofolio2\\wwwroot\\",
+      "BasePath": "_content/portofolio2",
+      "RelativePath": "css/project.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\project.css"
+    },
+    {
+      "Identity": "C:\\Users\\User\\OneDrive\\Desktop\\coding dojo\\c#\\net\\portofolio2\\wwwroot\\css\\style.css",
+      "SourceId": "portofolio2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\OneDrive\\Desktop\\coding dojo\\c#\\net\\portofolio2\\wwwroot\\",
+      "BasePath": "_content/portofolio2",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    },
+    {
+      "Identity": "C:\\Users\\User\\OneDrive\\Desktop\\coding dojo\\c#\\net\\portofolio2\\wwwroot\\image\\Screenshot (4).png",
+      "SourceId": "portofolio2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\OneDrive\\Desktop\\coding dojo\\c#\\net\\portofolio2\\wwwroot\\",
+      "BasePath": "_content/portofolio2",
+      "RelativePath": "image/Screenshot (4).png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\Screenshot (4).png"
+    }
+  ]
+}
