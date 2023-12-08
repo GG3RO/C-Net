@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDown</title>
+    <link rel="stylesheet" href="~/css/ssyl.css"/>    
+</head>
+<body>
+    @{
+        DateTime currentDate = DateTime.Now;
+        DateTime endDate = DateTime.Parse("2023-12-31 23:59:59");
+        string formattedCurrentDate = currentDate.ToString("yyyy-MM-dd HH:mm");
+        int dateComparison = currentDate.CompareTo(endDate);
+        string message = "";
+        if( dateComparison <0){
+            TimeSpan timeUntilEnd = endDate - currentDate;
+            message = $"There are {timeUntilEnd.TotalHours} hours until the end date.";
+        }
+        else if(dateComparison >0){
+            TimeSpan timeSinceEnd = currentDate - endDate;
+            message = $"The end date was  {timeSinceEnd.TotalHours} hours ago.";
+            
+        }
+        else{
+            message = "The current date is the same as the end date.";
+
+        }
+    }
+    <div class=" container flex flex-dir ">
+                <div class="flex">
+                    <div class="bb1">
+                        <h1>Start Date</h1>
+                        <p>@formattedCurrentDate</p>
+                    </div>
+                    <div class="bb1">
+                        <h1>End Date</h1>
+                        <p>2023-12-31 23:59:59</p>
+                    </div>
+                </div>
+            <div class="bb1">
+                <h1>Time left</h1>
+                <p>@message</p>
+            </div>
+    </div>
+    
+</body>
+</html>

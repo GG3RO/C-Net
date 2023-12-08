@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "FJ7iKP4jctk2R735SLd59q3IQm5DQgFCFsH6o3kg74w=",
+  "Source": "CountDown",
+  "BasePath": "_content/CountDown",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "CountDown\\wwwroot",
+      "Source": "CountDown",
+      "ContentRoot": "C:\\Users\\User\\OneDrive\\Desktop\\coding dojo\\c#\\net\\CountDown\\wwwroot\\",
+      "BasePath": "_content/CountDown",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\User\\OneDrive\\Desktop\\coding dojo\\c#\\net\\CountDown\\wwwroot\\css\\ssyl.css",
+      "SourceId": "CountDown",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\OneDrive\\Desktop\\coding dojo\\c#\\net\\CountDown\\wwwroot\\",
+      "BasePath": "_content/CountDown",
+      "RelativePath": "css/ssyl.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\ssyl.css"
+    }
+  ]
+}

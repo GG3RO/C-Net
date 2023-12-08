@@ -1,0 +1,21 @@
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+.container{
+    width: 25%;
+    text-align: center;
+    margin: auto;
+
+}
+
+.bb1{
+    border: 1px solid black;
+    margin: 20px;
+    padding: 10px;
+
+}
+
+.flex-dir{
+    flex-direction: column;
+}
