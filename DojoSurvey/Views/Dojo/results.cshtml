@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>results</title>
+    <link rel="stylesheet" href="~/css/res.css">
+</head>
+<body>
+    <form action="/" method="get">
+            <div class="container">
+            <h1>Submitted Info</h1>
+    <h4>Name : @ViewBag.Name</h4>
+    <h4>Location: @ViewBag.Location</h4>
+    <h4>Favourite Language: @ViewBag.Language</h4>
+    <h4>Comment(Optional): @ViewBag.Comment</h4>
+        <button id="butt">Go Back</button>
+    </div>
+    </form>
+</body>
+
+</html>
