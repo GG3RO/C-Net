@@ -1,0 +1,31 @@
+﻿
+   @model Survey
+    <div class="con ">
+        <form action="Results" method="post">
+            <div class="d-flex justify-content-between form-group mt-3">
+                <label for="Name">Your Name:</label>
+                <input type="text" name="Name">
+            </div>
+            <div class="d-flex justify-content-between form-group mt-3">
+                <label for="Location">Dojo Location</label>
+                <input type="text" list="optionsList" name="Location">
+                <datalist id="optionsList">
+                    <option value="San Jose">San Jose</option>
+                    <option value="Florida">Florida</option>
+                </datalist>
+            </div>
+            <div class="d-flex justify-content-between form-group mt-3">
+                <label for="Language">Favourite Language</label>
+                <input type="text" list="options" name="Language">
+                <datalist id="options">
+                    <option value="C#">C#</option>
+                    <option value="Java">Java</option>
+                </datalist>
+            </div>
+            <div class="d-flex justify-content-between form-group mt-3"> 
+                <label for="Comment">Comment (Optional):</label>
+                <textarea name="Comment" id="Comment" cols="18" rows="5"></textarea>
+            </div>
+            <button class="sub">Submit</button>
+        </form>
+    </div>
