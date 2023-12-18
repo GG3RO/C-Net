@@ -1,0 +1,31 @@
+﻿@model User
+
+<form asp-action="results" method="post">
+    <div class="container ">
+        <div class="form-group col-md-4 mb-3 ">
+            <label asp-for="Name"></label>
+            <input asp-for="Name">
+            <span asp-validation-for="Name"></span>
+        </div>
+        <div class="form-group col-md-4 mb-3 custom-selec">
+            <label asp-for="Location"></label>
+            <input asp-for="Location">
+            <option value="San Jose"></option>
+            <option value="Florida"></option>
+            <span asp-validation-for="Location"></span>
+        </div>
+        <div class="form-group col-md-4 mb-3 custom-selec    ">
+            <label asp-for="Language"></label>
+            <input asp-for="Language">
+            <option value="C#"></option>
+            <option value="Java"></option>
+            <span asp-validation-for="Language"></span>
+        </div>
+        <div class="form-group col-md-4 mb-3">
+            <label asp-for="Comment"></label>
+            <textarea asp-for="Comment"></textarea>
+            <span asp-validation-for="Comment"></span>
+        </div>
+        <input type="Submit" value="Register">
+    </div>
+</form>

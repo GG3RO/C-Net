@@ -1,0 +1,16 @@
+@model User 
+
+
+<div class="text-center">
+    <h3>@Model.Name</h3>
+    <h3>@Model.Location</h3>
+    <h3>@Model.Language</h3>
+    <h3>@Model.Comment</h3>
+    <input type="Submit" onclick="goBack()" value="Go Back">
+</div>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
