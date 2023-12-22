@@ -1,0 +1,6 @@
+﻿<h1 class="text-center">Welcome to CRUDelicious</h1>
+<h5><strong>Check Out some recent dishes</strong></h5>
+
+@foreach(var item in ViewBag.dishes){
+    <h4><a asp-action-="DetailDish" asp-route-itemid="@item.DishId">@item.DishName</a> by @item.DishChef</h4>
+}
