@@ -1,0 +1,26 @@
+@model Dish
+<h2 class="text-center">Yum! Check out our tasty dishes!</h2>
+
+<div class="text-center">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Name of Dish</th>
+                <th scope="col">Chef's Name</th>
+                <th scope="col">Tastiness</th>
+                <th scope="col"> # of Calories</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var Dishes in ViewBag.Dishes)
+            {
+                <tr>
+                    <td>@Dishes.Name</td>
+                    <td>@Dishes.Chef</td>
+                    <td>@Dishes.Tastiness</td>
+                    <td>@Dishes.Calories</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

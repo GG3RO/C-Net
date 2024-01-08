@@ -1,0 +1,33 @@
+@model Dish
+
+<form asp-action="CreateDish" method="post">
+    <div class="container mt-5 w-50">
+        <div class="form-group mb-3">
+            <label asp-for="Name" class="form-label">Name of Dish</label>
+            <input asp-for="Name" class="form-control border-2 mb-1">
+            <span asp-validation-for="Name"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label asp-for="Chef" class="form-label"> Chef's Name</label>
+            <input asp-for="Chef" class="form-control border-2 mb-1">
+            <span asp-validation-for="Chef"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label asp-for="Tastiness" class="form-label"></label>
+            <select asp-for="Tastiness" class="form-control border-2 mb-1">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <span asp-validation-for="Tastiness"></span>
+        </div>
+        <div class="form-group mb-3 ">
+            <label asp-for="Calories" class="form-label"> # of Calories</label>
+            <input asp-for="Calories" class="form-control border-2 mb-1">
+            <span asp-validation-for="Calories"></span>
+        </div>
+        <input type="submit" value="Add Dish" class="btn btn-primary m3">
+    </div>
+</form>
