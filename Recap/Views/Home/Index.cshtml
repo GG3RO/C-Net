@@ -1,0 +1,57 @@
+﻿@model Wedding
+
+@{
+  ViewData["Title"] = "Upcoming Weddings";
+}
+
+@await Html.PartialAsync("_Navbar")
+
+<div class="container mt-4">
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Wedding Of</th>
+          <th scope="col">Date</th>
+          <th scope="col">Guest Count</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        @foreach (Wedding wedding in ViewBag.AllDasmatToList)
+        {
+          <tr>
+            <td>
+              <a asp-action="WeddingDetails" asp-route-id="@wedding.WeddingId" class="text-decoration-none">@wedding.WedderOne & @wedding.WedderTwo</a>
+            </td>
+            <td>@wedding.Date.ToString("MMM d yyyy")</td>
+            <td>@wedding.teFtuarit.Count</td>
+            @{
+              var weddingEvent = wedding.teFtuarit.Any(e => e.WeddingId == wedding.WeddingId && e.UserId == ViewBag.UserId);
+              @if (ViewBag.UserId == wedding.UserId)
+              {
+                <td>
+                  <a asp-action="DeleteWedding" asp-route-id="@wedding.WeddingId" class="btn btn-danger w-100">Delete</a>
+                </td>
+              }
+              else
+              {
+                <td>
+                  @if (!weddingEvent)
+                  {
+                    <a asp-action="AttendWedding" asp-route-id="@wedding.WeddingId" class="btn btn-outline-success w-100">RSVP ✅</a>
+                  }
+                  else
+                  {
+                    <a asp-action="DoNotAttendWedding" asp-route-id="@wedding.WeddingId" class="btn btn-outline-danger w-100">Un-RSVP ❌</a>
+                  }
+                </td>
+              }
+            }
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

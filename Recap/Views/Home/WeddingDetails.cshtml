@@ -1,0 +1,43 @@
+@model Wedding
+@await Html.PartialAsync("_Navbar")
+
+<h1>Wedding Details</h1>
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <h3 class="card-title">Wedding Information</h3>
+            <dl class="row">
+                <dt class="col-sm-3">Wedder One:</dt>
+                <dd class="col-sm-9">@Model.WedderOne</dd>
+
+                <dt class="col-sm-3">Wedder Two:</dt>
+                <dd class="col-sm-9">@Model.WedderTwo</dd>
+
+                <dt class="col-sm-3">Date:</dt>
+                <dd class="col-sm-9">@Model.Date.ToString("MMM d yyyy")</dd>
+
+                <dt class="col-sm-3">Address:</dt>
+                <dd class="col-sm-9">@Model.Adress</dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title">Guests</h3>
+            @if (Model.teFtuarit != null && Model.teFtuarit.Any())
+            {
+                <ul class="list-group">
+                    @foreach (var item in Model.teFtuarit)
+                    {
+                        <li class="list-group-item">@item.Dasmori?.FirstName</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>No guests are currently attending.</p>
+            }
+        </div>
+    </div>
+</div>
