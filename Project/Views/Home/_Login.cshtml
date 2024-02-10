@@ -1,0 +1,27 @@
+@model Login
+
+<form asp-action="Login" method="post">
+    <div class="container form-control con border-dark mt-5">
+        <div class="form-group mb-3">
+            <div class="d-flex justify-content-between">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="w-70">
+            </div>
+            <span class="d-flex justify-content-end">          
+                <span asp-validation-for="Email"></span>
+            </span>
+        </div>
+        <div class="form-group pass mb-3">
+            <div class="d-flex justify-content-between">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" class="w-70">
+            </div>
+            <span class="d-flex justify-content-end">          
+                <span asp-validation-for="Password"></span>
+            </span>
+        </div>
+        <div class="d-flex justify-content-center"> 
+            <input type="submit" value="Login" class="btn btn-primary loginbtn">
+        </div>
+    </div>
+</form>

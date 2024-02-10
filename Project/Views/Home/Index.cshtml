@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@await Html.PartialAsync("_Navbar")
+
+<h3 class="text-center quick">Quick Options</h3>
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages5.alphacoders.com%2F357%2Fthumb-1920-357914.jpg&f=1&nofb=1&ipt=0b3d9e670a515099551c94321c554ebc346c060183647ee098104d6e80dd0221&ipo=images"
+                class="card-img-top" alt="Pizza Image">
+            <div class="card-body">
+                <h5 class="card-title">Delicious Pepperoni Pizza</h5>
+                <p class="card-text">Classic pepperoni pizza with a blend of mozzarella cheese and savory tomato sauce.
+                </p>
+                <a asp-action="Order" class="btn btn-primary">Order Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwc1813161.jpg&f=1&nofb=1&ipt=dfc00e9ba548b3b26bfade256fe44ce957d71459d6af7531d9488764085f830b&ipo=images"
+                class="card-img-top" alt="Pizza Image">
+            <div class="card-body">
+                <h5 class="card-title">Cheesy Margherita Pizza</h5>
+                <p class="card-text">Fresh basil, ripe tomatoes, and melted mozzarella cheese on a thin crust.</p>
+                <form asp-action="ReOrderFavorite" method="post">
+                    <button type="submit" class="btn btn-success">Reorder Favorite Pizza</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <img class="Question" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimage.shutterstock.com%2Fz%2Fstock-photo--d-golden-crust-cheesy-pizza-with-beef-pepperoni-topping-shaped-question-mark-sign-top-view-62735905.jpg&f=1&nofb=1&ipt=dc4b66c77616989f3c468b2d70af3f8cd4fb620dd194b4e834a01ba9bb4fcdb1&ipo=images"
+                class="card-img-top" alt="Pizza Image">
+            <div class="card-body">
+                <h5 class="card-title">Surprise Me Special</h5>
+                <p class="card-text">Let our chef surprise you with a unique combination of flavors and toppings!</p>
+                <form asp-action="SurprisePizza" method="post">
+                    <button type="submit" class="btn btn-warning">Surprise Me</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

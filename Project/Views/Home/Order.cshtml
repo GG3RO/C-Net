@@ -1,0 +1,125 @@
+@await Html.PartialAsync("_Navbar")
+@model Order
+
+<div class="row ml">
+    <div class="col-7">
+        <h3 class="text-center quick">Create Your Pizza</h3>
+        <form asp-action="CreateOrder" method="post" onsubmit="return limitToppings()">
+            <div class="row mb-3">
+                <div class="col">
+                    <label asp-for="Method" class="form-label">Method:</label>
+                    <select id="method" name="method" class="form-select">
+                        <option value="carry_out">Carry out</option>
+                        <option value="delivery">Delivery</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <label asp-for="Size" class="form-label">Size:</label>
+                    <select id="size" name="size" class="form-select">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                        <option value="extra_large">Extra Large</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label asp-for="Crust" class="form-label">Crust:</label>
+                    <select id="crust" name="crust" class="form-select">
+                        <option value="thin_crust">Thin crust</option>
+                        <option value="hand_tossed">Hand-tossed</option>
+                        <option value="deep_dish">Deep dish</option>
+                        <option value="stuffed_crust">Stuffed crust</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label asp-for="QTY" class="form-label">Quantity:</label>
+                    <select id="qty" name="qty" class="form-select">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+                            <label for="pepperoni">Pepperoni</label>
+                        </div>
+                        <div class="col">
+                            <input type="checkbox" id="sausage" name="toppings" value="sausage">
+                            <label for="sausage">Sausage</label>
+                        </div>
+                        <div class="col">
+                            <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+                            <label for="mushrooms">Mushrooms</label>
+                        </div>
+                        <div class="col">
+                            <input type="checkbox" id="onions" name="toppings" value="onions">
+                            <label for="onions">Onions</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <input type="checkbox" id="olives" name="toppings" value="olives">
+                            <label for="olives">Olives</label>
+                        </div>
+                        <div class="col">
+                            <input type="checkbox" id="tomatoes" name="toppings" value="tomatoes">
+                            <label for="tomatoes">Tomatoes</label>
+                        </div>
+                        <div class="col">
+                            <input type="checkbox" id="anchovies" name="toppings" value="anchovies">
+                            <label for="anchovies">Anchovies</label>
+                        </div>
+                        <div class="col">
+                            <input type="checkbox" id="bacon" name="toppings" value="bacon">
+                            <label for="bacon">Bacon</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <input type="checkbox" id="ham" name="toppings" value="ham">
+                            <label for="ham">Ham</label>
+                        </div>
+                        <div class="col">
+                            <input type="checkbox" id="spinach" name="toppings" value="spinach">
+                            <label for="spinach">Spinach</label>
+                        </div>
+                        <div class="col">
+                            <input type="checkbox" id="pineapple" name="toppings" value="pineapple">
+                            <label for="pineapple">Pineapple</label>
+                        </div>
+                        <div class="col">
+                            <input type="checkbox" id="extra_cheese" name="toppings" value="extra_cheese">
+                            <label for="extra_cheese">Ex Cheese</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Add to Order</button>
+        </form>
+        <script>
+            function limitToppings() {
+                var checkboxes = document.querySelectorAll('input[name="toppings"]:checked');
+                if (checkboxes.length > 5) {
+                    alert("You can only select up to 5 toppings.");
+                    checkboxes.forEach(function (checkbox) {
+                        checkbox.checked = false;
+                    });
+                }
+            }
+        </script>
+    </div>
+</div>

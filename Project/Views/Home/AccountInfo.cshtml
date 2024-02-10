@@ -1,0 +1,119 @@
+@model User
+@await Html.PartialAsync("_Navbar")
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-6">
+            <h3 class="mb-4 quick">Account Info</h3>
+            <form asp-action="Update" method="post">
+                <div class="form-group  mb-3">
+                    <div class="d-flex justify-content-between">
+                        <label asp-for="FirstName" class="form-label"></label>
+                        <input asp-for="FirstName" class="w-70">
+                    </div>
+                    <span class="d-flex justify-content-end">
+                        <span asp-validation-for="FirstName"></span>
+                    </span>
+                </div>
+                <div class="form-group  mb-3">
+                    <div class="d-flex justify-content-between">
+                        <label asp-for="LastName" class="form-label"></label>
+                        <input asp-for="LastName" class="w-70">
+                    </div>
+                    <span class="d-flex justify-content-end">
+                        <span asp-validation-for="LastName"></span>
+                    </span>
+                </div>
+                <div class="form-group  mb-3">
+                    <div class="d-flex justify-content-between">
+                        <label asp-for="Email" class="form-label"></label>
+                        <input asp-for="Email" class="w-70">
+                    </div>
+                    <span class="d-flex justify-content-end">
+                        <span asp-validation-for="Email"></span>
+                    </span>
+                </div>
+                <div class="form-group  mb-3">
+                    <div class="d-flex justify-content-between">
+                        <label asp-for="Address" class="form-label"></label>
+                        <input asp-for="Address" class="w-70">
+                    </div>
+                    <span class="d-flex justify-content-end">
+                        <span asp-validation-for="Address"></span>
+                    </span>
+                </div>
+                <div class="form-group  mb-3">
+                    <div class="d-flex justify-content-between">
+                        <label asp-for="City" class="form-label"></label>
+                        <input asp-for="City" class="w-70">
+                    </div>
+                    <span class="d-flex justify-content-end">
+                        <span asp-validation-for="City"></span>
+                    </span>
+                </div>
+                <input type="submit" class="btn btn-primary" value="Update">
+            </form>
+        </div>
+        <div class="col-6">
+            <h3 class="mb-4 quick">Past Orders</h3>
+            @if (Model.Orders != null && Model.Orders.Any())
+            {
+                <ul>
+                    @foreach (var order in Model.Orders)
+                    {
+                        <li class="mt-3 ">
+                            <div class="too">
+                                <strong></strong> @order.OrderDate
+                                <label>
+                                    <input type="checkbox" name="favoriteOrder" value="@order.OrderId" @(order.IsFavorite ?
+                                "checked" : "") data-order-id="@order.OrderId">
+                                    Mark as favorite
+                                </label>
+                                <form method="post" asp-controller="Home" asp-action="DeleteOrder">
+                                    <input type="hidden" name="orderId" value="@order.OrderId" />
+                                    <button type="submit" class="btn btn-danger">Cancel Order</button>
+                                </form>
+                            </div>
+                            <div class="ul">
+                                <strong>Size:</strong> @order.Size
+                                <strong>Topping:</strong> @order.TOPPINGS
+                                <strong>Price:</strong> @order.TotalPrice$
+                            </div>
+                        </li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>No past orders found.</p>
+            }
+        </div>
+
+
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const checkboxes = document.querySelectorAll('input[name="favoriteOrder"]');
+        checkboxes.forEach(function (checkbox) {
+            checkbox.addEventListener('change', function () {
+                const orderId = this.getAttribute('data-order-id');
+                const isFavorite = this.checked;
+
+                updateFavorite(orderId, isFavorite);
+            });
+        });
+
+        function updateFavorite(orderId, isFavorite) {
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', '/Home/UpdateFavorite?orderId=' + orderId + '&isFavorite=' + isFavorite, true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    // Update UI or handle success response if needed
+                }
+            };
+            xhr.send();
+        }
+    });
+</script>

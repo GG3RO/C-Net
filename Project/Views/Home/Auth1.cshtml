@@ -1,0 +1,13 @@
+<header>
+    <div class="auth">
+        <h1>Pizza Pete's</h1>
+        <a asp-action="Auth">Don't Have an Account? Register</a>
+    </div>
+</header>
+
+    <div >
+        <h3 class="text-center mt-4">Login</h3>
+        <div class="login col-10 ">
+            @await Html.PartialAsync("_Login")
+        </div>
+    </div>

@@ -1,0 +1,27 @@
+<header>
+    <nav class="navbar padding-0  navbar-expand-md navbar-light bg-light border-bottom mb-3 ">
+        <div class="container navbarBack  NavPadd navbody">
+            <a class="brand">Pizza App</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item butoni1">
+                        <a class="link "  asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item butoni1">
+                        <a class="link "  asp-action="Order">Order</a>
+                    </li>
+                    <li class="nav-item butoni1">
+                        <a class="link" asp-action="AccountInfo">Account (@ViewBag.OrderCount)</a>
+                    </li>
+                    <li class="nav-item butoni1">
+                        <a class="link"  asp-action="LogOut">LogOut</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
