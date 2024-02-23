@@ -1,0 +1,124 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body.HomePage-Background {
+  background: url('../images/hero-bg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
+.backround-black{
+  background-color: black;
+  width: 50%;
+  padding: 5px;
+  color: white;
+}
+
+.backround-black:hover{
+background-color: var(--primary-color);
+color: white;
+}
+
+.c{
+  border: 2px solid black;
+}
+
+
+.programs{
+  margin-top: 60px;
+  margin-left: auto;
+}
+
+.edit{
+  width: auto;
+  display: block;
+}
+
+.bo{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55vh;
+  background-color: #f4f4f4;
+}
+
+.ainer{
+  width: 380px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.ton {
+  width: 100%;
+  padding: 10px;
+  background-color: #101010;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.ton:hover {
+  background-color: #f13a11;
+}
+
+#result {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  width: 300px; 
+}
+
+.boy {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9; 
+  width: 350px;
+  margin: 150px auto; 
+}
+
+.boo{
+  display: flex;
+  justify-content: space-between;
+
+}
+.forma{
+  width: 105%;
+}

@@ -1,0 +1,21 @@
+@model Pjesemarrje
+
+<div style="margin-top: 50px;">
+    <div class="row mt-5">
+        <div class="col-6 mt-5 card" data-aos="fade-up" data-aos-delay="300"> <!-- Apply the "card" class here -->
+            <h2 style="font-size: 24px; color: #333; margin-bottom: 10px;" data-aos="fade-up" data-aos-delay="300">Emri i klases: @ViewBag.programi.Name</h2>
+            <p style="font-size: 16px; color: #666; margin-bottom: 10px;" data-aos="fade-up" data-aos-delay="300">Pershkrimi: @ViewBag.programi.Description</p>
+            <p style="font-size: 16px; color: #666; margin-bottom: 10px;" data-aos="fade-up" data-aos-delay="300">Taught By: @ViewBag.programi.Creator.Username</p>
+            <h3 style="font-size: 20px; color: #333; margin-bottom: 10px;" data-aos="fade-up" data-aos-delay="300">Pjesemarresit</h3>
+            @foreach (var item in ViewBag.programi.Pjesemarresit){
+                <p style="font-size: 16px; color: #666; margin-bottom: 5px;">@item.Pjesemarres?.Username</p>
+            }
+            @{
+                List<Pjesemarrje> pjesemarresit = ViewBag.programi.Pjesemarresit;
+                if(!pjesemarresit.Any(e=> e.UserId == ViewBag.UserId)) {
+            }
+            
+            }
+        </div>
+    </div>
+</div>

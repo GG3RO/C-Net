@@ -1,0 +1,35 @@
+@model Programi
+
+<div class="row mt-5 container">
+    <div class="col-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="card boy">
+            <div class="card-body">
+                <form asp-action="UpdateProgram" asp-route-id="@Model.ProgramiId" method="post" class="form-group">
+                    <h3 class="mb-4" data-aos="fade-up" data-aos-delay="200">Update Program</h3>
+
+                    <div class="mb-3" data-aos="fade-up" data-aos-delay="400">
+                        <label asp-for="Name" class="form-label">Program Name</label>
+                        <input class="form-control" asp-for="Name">
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3" data-aos="fade-up" data-aos-delay="500">
+                        <label asp-for="Description" class="form-label">Description</label>
+                        <input class="form-control" asp-for="Description">
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3" data-aos="fade-up" data-aos-delay="600">
+                        <label asp-for="YoutubeUrl" class="form-label">Youtube URL</label>
+                        <input class="form-control" asp-for="YoutubeUrl">
+                        <span asp-validation-for="YoutubeUrl" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3"  data-aos-delay="300">
+                        <button type="submit" class="btn backround-black btn-block">Update Program</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

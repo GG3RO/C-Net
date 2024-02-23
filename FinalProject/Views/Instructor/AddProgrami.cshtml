@@ -1,0 +1,32 @@
+@model Programi
+<div>
+    <div class="card boy">
+        <div class="card-body">
+            <form asp-action="CreateProgram" method="post" class="form-group">
+                <h3 class="mb-4">Add a Program</h3>
+                <div class="mb-3" >
+                    <label asp-for="Name" class="form-label">Program Name</label>
+                    <input class="form-control" asp-for="Name">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Description" class="form-label">Description</label>
+                    <input class="form-control" asp-for="Description">
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                
+
+                <div class="mb-3" >
+                    <label asp-for="YoutubeUrl" class="form-label">Youtube URL</label>
+                    <input class="form-control" asp-for="YoutubeUrl">
+                    <span asp-validation-for="YoutubeUrl" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <button type="submit" class="btn backround-black btn-block">Add Program</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+@model Pjesemarrje
+
+<div style="margin-top: 50px;" class="w-100">
+    <div class="row mt-5 w-100">
+        <div class="col-12 w-100 mt-5 card" data-aos="fade-up" data-aos-delay="300"> <!-- Apply the "card" class here -->
+            <div class="row">
+            <div class="col-6">
+            <iframe style="width: 80%; height: 500px; border-radius: 15px;" src="@ViewBag.programi.YoutubeUrl" frameborder="0"></iframe>
+
+            </div>
+            <div class="col-6">
+                <h2 style="font-size: 24px; color: #333; margin-bottom: 10px;" data-aos="fade-up" data-aos-delay="300">Emri i klases: @ViewBag.programi.Name</h2>
+            <p style="font-size: 16px; color: #666; margin-bottom: 10px;" data-aos="fade-up" data-aos-delay="300">Pershkrimi: @ViewBag.programi.Description</p>
+            <p style="font-size: 16px; color: #666; margin-bottom: 10px;" data-aos="fade-up" data-aos-delay="300">Taught By: @ViewBag.programi.Creator.Username</p>
+            <h3 style="font-size: 20px; color: #333; margin-bottom: 10px;" data-aos="fade-up" data-aos-delay="300">Pjesemarresit</h3>
+            @foreach (var item in ViewBag.programi.Pjesemarresit){
+                <p style="font-size: 16px; color: #666; margin-bottom: 5px;">@item.Pjesemarres?.Username</p>
+                
+            }
+            @{
+                List<Pjesemarrje> pjesemarresit = ViewBag.programi.Pjesemarresit;
+            if(pjesemarresit.Any(e=> e.UserId == ViewBag.UserId)) {
+
+            }else{
+                  <div class="col-6" data-aos="fade-up" data-aos-delay="300">
+                <form method="post" asp-action="JoinProgram" asp-controller="Home">
+                    <input type="hidden" name="id" data-aos="fade-up" data-aos-delay="300" value="@ViewBag.programi.ProgramiId" />
+                    <button type="submit" class="btn backround-black mt-3" style="font-size: 12px; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;" data-aos="fade-up" data-aos-delay="300" data-bs-target="#exampleModal">Join</button>
+                </form>
+            </div>
+            }
+            }
+            </div>
+            </div> 
+
+            
+            
+        </div>
+    </div>
+</div>
